@@ -41,3 +41,36 @@ main {
   color: #fff;
   text-decoration: none;
 }
+
+
+.books {
+  width: 100%;
+  list-style-type: none;
+  margin: 0;
+
+  &__item {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 1px solid rgba(141, 141, 141, 0.548);
+    padding: 10px 10px;
+    margin: 0;
+  }
+
+  &__title {
+    display: inline-block;
+    font-weight: 500;
+    font-size: 16px;
+    margin: 0 !important;
+    padding: 0 !important;
+  }
+
+  &__span {
+    display: inline-block;
+    background-color: #3b5998;
+    border-radius: 8px;
+    padding: 5px 10px;
+    font-size: 14px;
+    color: #fff;
+  }
+}

@@ -1,10 +1,16 @@
 {
   "booklist": [
     {
-      "id": 1,
-      "name": "Martin Idean",
-      "author": "Jack London",
-      "price": "500"
+      "id": "2420c174-bce9-45e1-b9c0-be7a01e42718",
+      "name": "Qo'rqma",
+      "author": "Javlonbek",
+      "price": "4.5"
+    },
+    {
+      "id": "d4ed6bee-02dc-4952-ba6b-abc88734eaec",
+      "name": "Shaytanat",
+      "author": "Tohirjon",
+      "price": "5"
     }
   ]
 }

@@ -10,13 +10,13 @@ import Control from './components/Control'
 import Login from './components/Login'
 import Api from "./api/API"
 import books from './api/API'
-import axios from 'axios'
 import { v4 as uuidv4 } from 'uuid';
+import EditBooks from './components/Books/EditBooks'
 
 
 function App() {
 
-  const [data, setData] = useState([])
+  // const [data, setData] = useState([])
 
   // useEffect(() => {
   //   const getData=async()=> {
@@ -39,53 +39,53 @@ function App() {
   // },[])
 
 
-  useEffect(() => {
-    books.getBooks().then(res => setData(res))
-  },[])
+  // useEffect(() => {
+  //   books.getBooks().then(res => setData(res))
+  // },[])
 
-  console.log(data)
-
-
-  const obj = {
-    id: uuidv4(),
-    name: "O'tgan Kunlar",
-    author: "Abdulla Qodiriy",
-    price: "555"
-  }
-
-  const sendData = () => {
-    books.sendBooks(obj)
-  }
+  // console.log(data)
 
 
-  let id = "3a079aed-fc46-4945-b718-5475e0798960"
-  let uz = {
-    id: uuidv4(),
-    name: "Qorqmas",
-    author: "Abdulla Qodiriy",
-    price: "scsacsa"
-  }
+  // const obj = {
+  //   id: uuidv4(),
+  //   name: "O'tgan Kunlar",
+  //   author: "Abdulla Qodiriy",
+  //   price: "555"
+  // }
 
-  const updateData = () => {
+  // const sendData = () => {
+  //   books.sendBooks(obj)
+  // }
 
-    books.updateBooks(id, uz)
-  }
-  const deleteData = () => {
-    books.deleteBooks(id)
-  }
+
+  // let id = "3a079aed-fc46-4945-b718-5475e0798960"
+  // let uz = {
+  //   id: uuidv4(),
+  //   name: "Qorqmas",
+  //   author: "Abdulla Qodiriy",
+  //   price: "scsacsa"
+  // }
+
+  // const updateData = () => {
+
+  //   books.updateBooks(id, uz)
+  // }
+  // const deleteData = () => {
+  //   books.deleteBooks(id)
+  // }
 
 
   return (
     <>
-    <button className='btn btn-primary' onClick={() => deleteData()}>send</button>
       <BrowserRouter>
       <Navbar />
         <main>
           <Routes>
             <Route path='/' element={<Private />}>
-              <Route path='/home' element={<Home />}/>
+              <Route path='/' element={<Home />}/>
               <Route path='/books' element={<Books />}/>
               <Route path='/control' element={<Control />}/>
+              <Route path='/editbooks/:id' element={<EditBooks />}/>
             </Route>
 
             <Route path='/login' element={<Login />}/>
